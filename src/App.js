@@ -7,8 +7,6 @@ import Login from "./components/login";
 import Register from "./components/register";
 import Signout from "./components/signout";
 import Settings from "./components/settings";
-import Quotes from "./components/quotes";
-import Chat from "./components/chat";
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,8 +17,8 @@ function App() {
           <Route exact path="/" element={<Main/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/quotes" element={<Quotes />} />
-          <Route path="/chat" element={<Chat />} /> */}
+          <Route path="/quotes" element={<Quotes />} />
+          <Route path="/chat" element={<Chat />} />
           <Route path="/signout" element={<Signout />} />
           <Route exact path="/settings" element={<Settings />} />
           <Route exact path="/user" element={<MainLogin />} />
