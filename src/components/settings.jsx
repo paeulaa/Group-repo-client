@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "../css/settings.css";
-import configData from "../config.json";
 
 export default function Settings() {
   const [form, setForm] = useState({
     fname: "",
     lname: "",
     email: "",
+    conemail: "",
     password: "",
+    conpassword: "",
     pronoun: "",
     imageUrl: "",
   });
@@ -18,14 +20,17 @@ export default function Settings() {
   useEffect(() => {
     const fetchFirstUserData = async () => {
       try {
-        const response = await fetch(configData.SERVER_URL + "/firstuserinfo", {
-          mode: "no-cors",
-        });
+        const response = await fetch("http://localhost:5050/firstuserinfo");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        if (data.imageUrl) {
+          setImageSrc(`http://localhost:5050${data.imageUrl}`);
+          setIsImageUploaded(true);
+        }
         console.log("Fetched userId:", data._id); // Log the userId
+        console.log("Fetched imageUrl", data.imageUrl);
         sessionStorage.setItem("userId", data._id);
         setForm({
           fname: data.fname,
@@ -51,6 +56,39 @@ export default function Settings() {
   // This function will handle the submission.
   async function onSubmit(e) {
     e.preventDefault();
+    // Validation for required fields
+    // Validation check for required fields
+    if (
+      !form.fname ||
+      !form.lname ||
+      !form.email ||
+      !form.password ||
+      !form.conemail ||
+      !form.conpassword
+    ) {
+      window.alert("Please fill out all required fields.");
+      return;
+    }
+
+    // Email format validation using regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      window.alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Check if email and confirm email match
+    if (form.email !== form.conemail) {
+      window.alert("Email and confirm email do not match.");
+      return;
+    }
+
+    // Check if password and confirm password match
+    if (form.password !== form.conpassword) {
+      window.alert("Password and confirm password do not match.");
+      return;
+    }
+
     const userId = sessionStorage.getItem("userId");
     console.log("Submitting for userId:", userId);
     const userChange = { ...form, userId };
@@ -63,19 +101,24 @@ export default function Settings() {
     if (imageFile) {
       formData.append("image", imageFile); // Append the image file if it's available
     }
+    console.log("Validation passed, proceeding with submission");
     try {
-      const response = await fetch(configData.SERVER_URL + "/settings", {
+      console.log("Sending data to server");
+      const response = await fetch("http://localhost:5050/settings", {
         // Change to your API's update endpoint
         method: "PUT", // or 'PATCH' depending on your API
         body: formData,
       });
+      console.log("Response received", response);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       // Optionally process response data
-
-      navigate("/");
+      // Alert user of successful save
+      console.log("Submission successful, showing alert and reloading page");
+      window.alert("Information successfully saved.");
+      window.location.reload();
     } catch (error) {
       window.alert(error);
       console.error("Updating user data failed:", error);
@@ -134,55 +177,50 @@ export default function Settings() {
             </div>
             <img className="signout-icon" src="/img/signout-icon.svg" />
           </div>
-          <div className="profile-settings">
-            <div className="text-wrapper-8">Profile Settings</div>
-            <img className="settings-icon" src="/img/settings-icon.svg" />
-          </div>
-          <div className="bookmarks">
-            <img className="bookmark-icon" src="/img/bookmark-icon.svg" />
-            <div className="text-wrapper-9">Bookmarks</div>
-          </div>
-          <div className="quotes">
-            <div className="overlap-group-2">
-              <div className="text-wrapper-10">Quotes</div>
-              <img className="scroll-icon" src="/img/scroll-icon.svg" />
+          <Link to="/settings">
+            <div className="profile-settings">
+              <div className="text-wrapper-8">Profile Settings</div>
+              <img className="settings-icon" src="/img/settings-icon.svg" />
             </div>
-          </div>
-          <div className="althea">
-            <div className="overlap-3">
-              <div className="text-wrapper-11">Althea</div>
-              <img
-                className="crystall-ball-icon"
-                src="/img/crystall-ball-icon.svg"
-              />
+          </Link>
+          <Link to="/bookmarks">
+            <div className="bookmarks">
+              <img className="bookmark-icon" src="/img/bookmark-icon.svg" />
+              <div className="text-wrapper-9">Bookmarks</div>
             </div>
-          </div>
-          <div className="search">
-            <div className="overlap-4">
-              <input
-                className="search-for"
-                form-control="Search for..."
-                type="text"
-              />
-              <img className="search-icon" src="/img/search-icon.svg" />
+          </Link>
+          <Link to="/quotes">
+            <div className="quotes">
+              <div className="overlap-group-2">
+                <div className="text-wrapper-10">Quotes</div>
+                <img className="scroll-icon" src="/img/scroll-icon.svg" />
+              </div>
             </div>
-          </div>
-          <div className="profile-group">
-            <img
-              className="notification-icon"
-              src="/img/notification-icon.svg"
-            />
+          </Link>
+          <Link to="/althea">
+            <div className="althea">
+              <div className="overlap-3">
+                <div className="text-wrapper-11">Althea</div>
+                <img
+                  className="crystall-ball-icon"
+                  src="/img/crystall-ball-icon.svg"
+                />
+              </div>
+            </div>
+          </Link>
+          {/* <div className="profile-group">
             <div className="user-icon-wrapper">
               <img className="user-icon" src="/img/user-icon.svg" />
             </div>
-            <img className="img" src="/img/settings-icon.svg" />
-          </div>
-          <div className="logo">
-            <div className="text-wrapper-12">Good Fortune</div>
-            <div className="overlap-group-wrapper">
-              <img className="overlap-group-3" src="/img/logo.svg" />
+          </div> */}
+          <Link to="/">
+            <div className="logo">
+              <div className="text-wrapper-12">Good Fortune</div>
+              <div className="overlap-group-wrapper">
+                <img className="overlap-group-3" src="/img/logo.svg" />
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="overlap">
@@ -228,26 +266,6 @@ export default function Settings() {
             <br />
             Max. 2MB
           </p>
-          <div className="notification">
-            <div className="top">
-              <div className="icon">
-                <img className="icon-jam-icons" src="/img/check.svg" />
-              </div>
-              <div className="content">
-                <div className="title-subtitle">
-                  <div className="title">Successfully Saved.</div>
-                  <p className="subtitle">
-                    Your profile settings have been saved.
-                  </p>
-                </div>
-              </div>
-              <div className="right">
-                <div className="close">
-                  <img className="icon-jam-icons" src="/img/close.svg" />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <form className="profile-information" ref={formRef} onSubmit={onSubmit}>
           <div className="group-2">
@@ -305,6 +323,8 @@ export default function Settings() {
                 id="conemail"
                 name="conemail"
                 type="text"
+                value={form.conemail}
+                onChange={(e) => updateForm({ conemail: e.target.value })}
                 required=""
               />
             </div>
@@ -341,6 +361,8 @@ export default function Settings() {
                 id="conpassword"
                 name="conpassword"
                 type={isConfirmPasswordVisible ? "text" : "password"}
+                value={form.conpassword}
+                onChange={(e) => updateForm({ conpassword: e.target.value })}
                 required=""
               />
               <img
