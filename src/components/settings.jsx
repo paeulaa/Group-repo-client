@@ -18,7 +18,9 @@ export default function Settings() {
   useEffect(() => {
     const fetchFirstUserData = async () => {
       try {
-        const response = await fetch(configData.SERVER_URL + "/firstuserinfo");
+        const response = await fetch(configData.SERVER_URL + "/firstuserinfo", {
+          mode: "no-cors",
+        });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
