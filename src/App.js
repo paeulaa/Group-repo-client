@@ -7,8 +7,8 @@ import Login from "./components/login";
 import Register from "./components/register";
 import Signout from "./components/signout";
 import Settings from "./components/settings";
-import Settings from "./components/quotes";
-import Settings from "./components/chat";
+import Quotes from "./components/quotes";
+import Chat from "./components/chat";
 import logo from './logo.svg';
 import './App.css';
 
