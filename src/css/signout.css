@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gabriela", serif;
+  font-family: "Noto Serif", serif;
+  /* cursor: url('../materials/favicon-f.svg'),auto; */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+div.container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+div.container div.pic-container img.sign-out-background {
+  z-index: 0;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div.container div.pic-container button.back {
+  position: absolute;
+  z-index: 5;
+  margin: 46.8rem 10rem 10rem 40rem;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  text-decoration: none;
+  font-family: "Noto Serif", serif;
+}/*# sourceMappingURL=signout.css.map */

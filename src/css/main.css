@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gabriela", serif;
+  font-family: "Noto Serif", serif;
+  /* cursor: url('../materials/favicon-f.svg'),auto; */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  background-color: #F2EDE7;
+}
+body div.navbar {
+  background-color: #F8D6A4;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+}
+body div.navbar div.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0rem 0rem 0rem 2.5rem;
+}
+body div.navbar div.brand img {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+body div.navbar div.brand div.name {
+  font-family: "Gabriela", serif;
+  font-size: 3.5rem;
+  justify-content: center;
+  padding-left: 0.5rem;
+}
+body div.navbar div.buttons {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  padding-left: 39rem;
+  justify-content: center;
+  font-size: 20px;
+}
+body div.navbar div.buttons a {
+  text-decoration: none;
+}
+body div.navbar div.buttons a div.login-button {
+  justify-content: center;
+  color: black;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+body div.navbar div.buttons a div.login-button:hover {
+  text-decoration: underline;
+}
+body div.navbar div.buttons a {
+  text-decoration: none;
+}
+body div.navbar div.buttons a div.register-button {
+  border-style: solid;
+  border-color: black;
+  justify-content: center;
+  color: black;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+body div.navbar div.buttons a div.register-button:hover {
+  color: #F8D6A4;
+  border-color: #F8D6A4;
+  background-color: black;
+}
+body div.section1 {
+  display: flex;
+  flex-direction: row;
+}
+body div.section1 div.introduction {
+  justify-content: center;
+  text-align: center;
+  padding: 8.5rem 0rem 0rem 6rem;
+}
+body div.section1 div.introduction div.title {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.5rem;
+  letter-spacing: 0.0625rem;
+  padding: 0rem 0rem 0rem 1rem;
+}
+body div.section1 div.introduction div.buttons {
+  display: inline-flex;
+  justify-content: center;
+  padding: 3rem 0rem 0rem 0rem;
+}
+body div.section1 div.introduction div.buttons a {
+  text-decoration: none;
+}
+body div.section1 div.introduction div.buttons a div.register-button {
+  border-style: solid;
+  border-color: black;
+  justify-content: center;
+  padding: 0.5rem 5rem 0.5rem 5rem;
+  margin-right: 3rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+body div.section1 div.introduction div.buttons a div.register-button:hover {
+  color: #F2EDE7;
+  border-color: #F2EDE7;
+  background-color: black;
+}
+body div.section1 div.introduction div.buttons a {
+  text-decoration: none;
+}
+body div.section1 div.introduction div.buttons a div.moreinformation-button {
+  justify-content: center;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  color: black;
+}
+body div.section1 div.introduction div.buttons a div.moreinformation-button:hover {
+  text-decoration: underline;
+}
+body div.section1 div.coverImage {
+  /* border-style: solid;
+  border-color: black; */
+  margin-right: 3rem;
+}
+body div.section1 div.coverImage img {
+  width: 580px;
+  height: 580px;
+}
+body div.section2 {
+  display: flex;
+  flex-direction: row;
+  background-color: #F8D6A4;
+}
+body div.section2 div.left {
+  margin: 7rem 3rem 0rem 4rem;
+}
+body div.section2 div.left img {
+  width: 47rem;
+  height: 25rem;
+}
+body div.section2 div.right {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 3.5rem;
+  letter-spacing: 0.0625rem;
+  padding: 17rem 4.5rem 0rem 0rem;
+  text-align: center;
+  align-items: center;
+}
+body div.section3 {
+  display: flex;
+  flex-direction: row;
+  background-color: #F8D6A4;
+  padding-bottom: 15rem;
+}
+body div.section3 div.left {
+  margin: 10rem 2rem 0rem 5rem;
+}
+body div.section3 div.left img {
+  width: 47rem;
+  height: 35rem;
+}
+body div.section3 div.right {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 3.5rem;
+  letter-spacing: 0.0625rem;
+  padding: 16rem 4.5rem 0rem 0rem;
+  text-align: center;
+}
+body div.section4 {
+  display: inline-flex;
+}
+body div.section4 div.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 3rem 0rem 10rem 4rem;
+  position: relative;
+}
+body div.section4 div.brand img {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+body div.section4 div.brand div.name {
+  font-family: "Gabriela", serif;
+  font-size: 3.5rem;
+  justify-content: center;
+  padding-left: 0.5rem;
+}
+body div.section4 div.footer {
+  position: absolute;
+  text-align: right;
+  left: 73%;
+  padding: 3rem 0rem 0rem 0rem;
+}
+body div.section4 div.footer img {
+  width: 50px;
+  height: 50px;
+}
+body div.section4 div.footer div.copyright {
+  padding: 0.5rem 0rem 0rem 0rem;
+}
+body div.section4 div.back {
+  position: absolute;
+  text-align: center;
+  left: 46%;
+  margin-top: 15rem;
+  color: black;
+}
+body div.section4 div.back:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */

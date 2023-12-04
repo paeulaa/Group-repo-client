@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gabriela', serif;
+    font-family: 'Noto Serif', serif;
+    /* cursor: url('../materials/favicon-f.svg'),auto; */
+    user-select: none;
+}
+
+body{
+    background-color: #F2EDE7;
+    div.navbar{
+        background-color: #F8D6A4;
+        display: flex;
+        flex-direction: row;
+        position: sticky;
+        top: 0;
+        padding: 1rem;
+        div.brand{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0rem 0rem 0rem 2.5rem;
+            img{
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+                padding-top: 0.5rem;
+            }
+            div.name{
+                font-family: 'Gabriela', serif;
+                font-size: 3.5rem;
+                justify-content: center;
+                padding-left: 0.5rem;
+            }
+        }
+        div.buttons{
+            display:flex;
+            flex-direction: row;
+            place-items: center;
+            padding-left: 39rem;
+            justify-content: center;
+            font-size: 20px;
+            a{
+                text-decoration: none;
+                div.login-button{
+                    justify-content: center;
+                    color:black;
+                    padding: 0.5rem 2rem 0.5rem 2rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
+                div.register-button{
+                    border-style: solid;
+                    border-color: black;
+                    justify-content: center;
+                    color:black;
+                    padding: 0.5rem 2rem 0.5rem 2rem;
+                    &:hover {
+                        color:#F8D6A4;
+                        border-color: #F8D6A4;
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+    div.section1{
+        display: flex;
+        flex-direction: row;
+        div.introduction{
+            justify-content: center;
+            text-align: center;
+            padding: 8.5rem 0rem 0rem 6rem;
+            div.title{
+                font-family: 'Noto Serif', serif;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 3.5rem;
+                letter-spacing: 0.0625rem;
+                padding: 0rem 0rem 0rem 1rem;
+            }
+            div.buttons{
+                display: inline-flex;
+                justify-content: center;
+                padding: 3rem 0rem 0rem 0rem;
+                a{
+                    text-decoration: none;
+                    div.register-button{
+                        border-style: solid;
+                        border-color: black;
+                        justify-content: center;
+                        padding: 0.5rem 5rem 0.5rem 5rem;
+                        margin-right: 3rem;
+                        font-size: 1.5rem;
+                        text-decoration: none;
+                        color:black;
+                        &:hover {
+                            color:#F2EDE7;
+                            border-color: #F2EDE7;
+                            background-color: black;
+                        }
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    div.moreinformation-button{
+                        justify-content: center;
+                        padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+                        color:black;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        div.coverImage{
+            /* border-style: solid;
+            border-color: black; */
+            margin-right: 3rem;
+            img{
+                width: 580px;
+                height: 580px;
+            }
+        }
+    }
+    div.section2{
+        display: flex;
+        flex-direction: row;
+        background-color: #F8D6A4;
+        div.left{
+            margin: 7rem 3rem 0rem 4rem;
+            img{
+                width:47rem;
+                height:25rem;;
+            }
+        }
+        div.right{
+            font-family: 'Noto Serif', serif;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 3.5rem;
+            letter-spacing: 0.0625rem;
+            padding: 17rem 4.5rem 0rem 0rem;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    div.section3{
+        display: flex;
+        flex-direction: row;
+        background-color: #F8D6A4;
+        padding-bottom: 15rem;
+        div.left{
+            margin: 10rem 2rem 0rem 5rem;
+            img{
+                width:47rem;
+                height:35rem;;
+            }
+        }
+        div.right{
+            font-family: 'Noto Serif', serif;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 3.5rem;
+            letter-spacing: 0.0625rem;
+            padding: 16rem 4.5rem 0rem 0rem;
+            text-align: center;
+        }
+    }
+    div.section4{
+        display: inline-flex;
+        div.brand{
+            display:flex;
+            flex-direction: row;
+            justify-content: left;
+            padding: 3rem 0rem 10rem 4rem;
+            position:relative;
+            img{
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+                padding-top: 0.5rem;
+            }
+            div.name{
+                font-family: 'Gabriela', serif;
+                font-size: 3.5rem;
+                justify-content: center;
+                padding-left: 0.5rem;
+            }
+        }
+        div.footer{
+            position:absolute;
+            text-align: right;
+            left:73%;
+            padding: 3rem 0rem 0rem 0rem;
+            img{
+                width:50px;
+                height:50px;
+            }
+            div.copyright{
+                padding: 0.5rem 0rem 0rem 0rem;
+            }
+        }
+        div.back{
+            position:absolute;
+            text-align: center;
+            left:46%;
+            margin-top:15rem;
+            color:black;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

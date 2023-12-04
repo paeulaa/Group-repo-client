@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gabriela", serif;
+  font-family: "Noto Serif", serif;
+  /* cursor: url('../materials/favicon-f.svg'),auto; */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  z-index: -1;
+  /* display: flex;
+  flex-direction: row; */
+  background-color: #F2EDE7;
+}
+body div.container-text-center {
+  height: 80vh;
+}
+body div.container-text-center div.carousel-container {
+  width: 40rem;
+  height: 5rem;
+  left: 100%;
+}
+body div.container-text-center div.login-block {
+  /* z-index: 5; */
+  position: absolute;
+  justify-content: center;
+  top: 0%;
+  right: 0%;
+  width: 60%;
+  left: 43%;
+}
+body div.container-text-center div.login-block div.title {
+  z-index: 3;
+  font-family: "Gabriela", serif;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #1D1D1B;
+  padding-top: 5rem;
+}
+body div.container-text-center div.login-block div.sub-title {
+  z-index: 3;
+  font-family: "Noto Serif", serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #D99B3C;
+  -webkit-text-stroke: 1px #1D1D1B;
+  /* text-stroke: 1x #1D1D1B; */
+  text-align: center;
+  padding: 0.1rem 0rem 0.5rem 0rem;
+}
+body div.container-text-center div.login-block div.loginContainer {
+  height: 100%;
+  padding: 1rem 12rem 1rem 12rem;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container div.block-1 {
+  grid-column: 1/2;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container div.block-3 {
+  grid-column: 1/3;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container div.block-4 {
+  grid-column: 1/3;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container label {
+  font-size: 1rem;
+  color: #1D1D1B;
+  /* padding: 1rem 0rem 0rem 0rem; */
+  text-align: left;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container input[type=text] {
+  border-style: solid;
+  border-color: #1D1D1B;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-width: 1.5px;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  height: 2rem;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container input[type=text]:active, body div.container-text-center div.login-block div.loginContainer div.gird-container input[type=text]:hover {
+  border-style: solid;
+  border-color: #1D1D1B;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container label.password {
+  font-size: 1rem;
+  color: #1D1D1B;
+  padding: 0rem 0rem 0rem 0rem;
+  text-align: left;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container input[type=password] {
+  border-style: solid;
+  border-color: #1D1D1B;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-width: 1.5px;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  height: 2.5rem;
+}
+body div.container-text-center div.login-block div.loginContainer div.gird-container input[type=password]:active, body div.container-text-center div.login-block div.loginContainer div.gird-container input[type=password]:hover {
+  border-style: solid;
+  border-color: #1D1D1B;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+body div.container-text-center div.login-block div.loginContainer div.psw {
+  text-align: end;
+  padding: 0.5rem 0rem 0rem 0rem;
+  font-size: 0.8rem;
+  color: #1D1D1B;
+}
+body div.container-text-center div.login-block div.loginContainer div.psw a {
+  text-decoration: none;
+  color: #1D1D1B;
+}
+body div.container-text-center div.login-block div.loginContainer input[type=submit] {
+  text-decoration: none;
+  width: 100%;
+  height: 3rem;
+  margin: 1rem 0rem 1rem 0rem;
+  border-style: solid;
+  border-color: #1D1D1B;
+  background-color: #D99B3C;
+  border-width: 1px;
+  font-weight: 800;
+}
+body div.container-text-center div.login-block div.loginContainer div.horizontal-line {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+}
+body div.container-text-center div.login-block div.loginContainer div.horizontal-line::before, body div.container-text-center div.login-block div.loginContainer div.horizontal-line::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px #1D1D1B solid;
+  margin: 0rem 0.3rem 0.5rem 0.3rem;
+}
+body div.container-text-center div.login-block div.loginContainer a button[type=email] {
+  width: 100%;
+  height: 3rem;
+  margin: 1rem 0rem 1rem 0rem;
+  border-style: solid;
+  border-color: #1D1D1B;
+  background-color: transparent;
+  padding-bottom: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+}
+body div.container-text-center div.login-block div.loginContainer a button[type=email] div.elogin {
+  align-items: center;
+  text-align: center;
+  padding-top: 0.25rem;
+}
+body div.container-text-center div.login-block div.loginContainer a button[type=email] img {
+  width: 20px;
+  height: 20px;
+  padding-top: 0.2rem;
+  margin-right: 0.5rem;
+}
+body div.container-text-center div.login-block div.loginContainer div.newac {
+  text-align: center;
+  font-family: "Noto Serif", serif;
+  font-size: 1rem;
+  width: 100%;
+}/*# sourceMappingURL=register.css.map */

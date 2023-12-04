@@ -1,0 +1,741 @@
+.mid-fidelity {
+  position: relative;
+  width: 1728px;
+  height: 1117px;
+  background-color: #f2ede7;
+}
+
+.mid-fidelity .bookmarks-page {
+  position: absolute;
+  width: 1406px;
+  height: 1116px;
+  top: 1px;
+  left: 322px;
+  background-color: #f2ede7;
+}
+
+.mid-fidelity .bookmark {
+  position: absolute;
+  width: 422px;
+  height: 434px;
+  top: 633px;
+  left: 493px;
+}
+
+.mid-fidelity .overlap {
+  position: relative;
+  width: 420px;
+  height: 434px;
+  background-color: #da9b3c;
+  border: 2.5px solid;
+  border-color: #000000;
+}
+
+.mid-fidelity .img {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 392px;
+  left: 330px;
+}
+
+.mid-fidelity .img-2 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 390px;
+  left: 364px;
+}
+
+.mid-fidelity .text-wrapper {
+  position: absolute;
+  width: 210px;
+  top: 396px;
+  left: 16px;
+  /*font-family: "Noto Serif-Medium", Helvetica;*/
+  font-family: "Noto Serif";
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 15px;
+}
+
+.mid-fidelity .sample-frame {
+  position: absolute;
+  width: 393px;
+  height: 369px;
+  top: 10px;
+  left: 10px;
+  background-color: #f8d6a4;
+  border: 2.5px solid;
+  border-color: #000000;
+  overflow: hidden;
+}
+
+.mid-fidelity .overlap-wrapper {
+  position: absolute;
+  width: 422px;
+  height: 434px;
+  top: 168px;
+  left: 944px;
+}
+
+.mid-fidelity .overlap-group-wrapper {
+  position: absolute;
+  width: 422px;
+  height: 433px;
+  top: 168px;
+  left: 493px;
+}
+
+.mid-fidelity .overlap-2 {
+  position: relative;
+  width: 420px;
+  height: 433px;
+  background-color: #da9b3c;
+  border: 2.5px solid;
+  border-color: #000000;
+}
+
+.mid-fidelity .quotes-wrapper {
+  position: absolute;
+  width: 393px;
+  height: 368px;
+  top: 10px;
+  left: 10px;
+  background-color: #f8d6a4;
+  border: 2.5px solid;
+  border-color: #000000;
+}
+
+.mid-fidelity .quotes {
+  position: relative;
+  width: 363px;
+  height: 176px;
+  top: 96px;
+  left: 15px;
+}
+
+.mid-fidelity .quote-scroll {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.mid-fidelity .sample-quote {
+  position: relative;
+  width: 282px;
+  height: 64px;
+  top: 53px;
+  left: 28px;
+  z-index: 2;
+}
+
+.mid-fidelity .an-early-morning {
+  width: 262px;
+  height: 52px;
+  top: -1px;
+  left: -1px;
+  -webkit-text-stroke: 1px #000000;
+  font-family: "Gabriela", Helvetica;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1.12px;
+  line-height: 20.5px;
+  color: #000000;
+}
+
+.mid-fidelity .span {
+  font-family: "Gabriela", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 1.12px;
+  line-height: 20.5px;
+}
+
+.mid-fidelity .text-wrapper-2 {
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 700;
+}
+
+.mid-fidelity .text-wrapper-3 {
+  position: absolute;
+  width: 114px;
+  height: 12px;
+  top: 52px;
+  left: 164px;
+  font-family: "Gabriela", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.mid-fidelity .bookmark-2 {
+  position: absolute;
+  width: 422px;
+  height: 434px;
+  top: 167px;
+  left: 42px;
+}
+
+.mid-fidelity .tabs {
+  position: absolute;
+  width: 1318px;
+  height: 29px;
+  top: 97px;
+  left: 39px;
+}
+
+.mid-fidelity .overlap-3 {
+  position: relative;
+  height: 29px;
+}
+
+.mid-fidelity .line {
+  position: absolute;
+  width: 1310px;
+  height: 1px;
+  top: 22px;
+  left: 8px;
+  object-fit: cover;
+}
+
+.mid-fidelity .dashboard-tab {
+  height: 29px;
+  left: 0;
+  position: absolute;
+  width: 92px;
+  top: 0;
+}
+
+.mid-fidelity .overlap-group-2 {
+  position: relative;
+  width: 90px;
+  height: 29px;
+}
+
+.mid-fidelity .text-wrapper-4 {
+  position: absolute;
+  width: 90px;
+  height: 28px;
+  top: -25px;
+  left: 6px;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 69px;
+  white-space: nowrap;
+}
+
+.mid-fidelity .line-2 {
+  position: absolute;
+  width: 82px;
+  height: 2px;
+  top: 26px;
+  left: 4px;
+}
+
+.mid-fidelity .dashboard-tab-2 {
+  height: 28px;
+  left: 238px;
+  position: absolute;
+  width: 92px;
+  top: 0;
+}
+
+.mid-fidelity .dashboard-tab-3 {
+  height: 28px;
+  left: 119px;
+  position: absolute;
+  width: 92px;
+  top: 0;
+}
+
+.mid-fidelity .text-wrapper-5 {
+  position: absolute;
+  width: 297px;
+  height: 58px;
+  top: 7px;
+  left: 9px;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 69px;
+  white-space: nowrap;
+}
+
+.mid-fidelity .bookmark-3 {
+  position: absolute;
+  width: 422px;
+  height: 433px;
+  top: 634px;
+  left: 42px;
+}
+
+.mid-fidelity .sample-quote-wrapper {
+  position: relative;
+  width: 363px;
+  height: 176px;
+  top: 96px;
+  left: 15px;
+  background-image: url(./img/quotes-scroll.png);
+  background-size: 100% 100%;
+}
+
+.mid-fidelity .sidebar {
+  position: absolute;
+  width: 322px;
+  height: 1117px;
+  top: 0;
+  left: 0;
+  background-color: #f8d6a4;
+}
+
+.mid-fidelity .overlap-4 {
+  position: relative;
+  height: 1117px;
+  background-color: #f8d6a4;
+}
+
+.mid-fidelity .signout {
+  position: absolute;
+  width: 169px;
+  height: 28px;
+  top: 1067px;
+  left: 49px;
+}
+
+.mid-fidelity .signout-text {
+  position: absolute;
+  width: 142px;
+  height: 28px;
+  top: 0;
+  left: 29px;
+}
+
+.mid-fidelity .text-wrapper-6 {
+  position: absolute;
+  width: 140px;
+  height: 28px;
+  top: 0;
+  left: 0;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+.mid-fidelity .signout-icon {
+  position: absolute;
+  width: 19px;
+  height: 21px;
+  top: 3px;
+  left: -1px;
+}
+
+.mid-fidelity .profile-settings {
+  position: absolute;
+  width: 164px;
+  height: 28px;
+  top: 487px;
+  left: 31px;
+}
+
+.mid-fidelity .text-wrapper-7 {
+  position: absolute;
+  width: 140px;
+  height: 28px;
+  top: 0;
+  left: 22px;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.mid-fidelity .settings-icon {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 6px;
+  left: 0;
+}
+
+.mid-fidelity .bookmarks {
+  position: absolute;
+  width: 135px;
+  height: 28px;
+  top: 429px;
+  left: 28px;
+}
+
+.mid-fidelity .bookmark-icon {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  top: 4px;
+  left: 0;
+}
+
+.mid-fidelity .text-wrapper-8 {
+  position: absolute;
+  width: 110px;
+  height: 28px;
+  top: 0;
+  left: 23px;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.mid-fidelity .quotes-2 {
+  width: 97px;
+  top: 371px;
+  left: 29px;
+  position: absolute;
+  height: 28px;
+}
+
+.mid-fidelity .overlap-group-3 {
+  position: relative;
+  width: 95px;
+  height: 28px;
+}
+
+.mid-fidelity .text-wrapper-9 {
+  width: 73px;
+  top: 0;
+  left: 22px;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  height: 28px;
+}
+
+.mid-fidelity .scroll-icon {
+  position: absolute;
+  width: 23px;
+  height: 20px;
+  top: 7px;
+  left: 0;
+}
+
+.mid-fidelity .althea {
+  position: absolute;
+  width: 93px;
+  height: 28px;
+  top: 313px;
+  left: 31px;
+}
+
+.mid-fidelity .overlap-5 {
+  position: relative;
+  width: 91px;
+  height: 28px;
+}
+
+.mid-fidelity .text-wrapper-10 {
+  position: absolute;
+  width: 73px;
+  height: 28px;
+  top: 0;
+  left: 18px;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.mid-fidelity .crystall-ball-icon {
+  position: absolute;
+  width: 19px;
+  height: 20px;
+  top: 5px;
+  left: 0;
+}
+
+.mid-fidelity .search {
+  position: absolute;
+  width: 291px;
+  height: 53px;
+  top: 184px;
+  left: 16px;
+}
+
+.mid-fidelity .overlap-6 {
+  position: relative;
+  width: 289px;
+  height: 53px;
+  background-color: #f2ede7;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.mid-fidelity .search-for {
+  width: 105px;
+  height: 20px;
+  left: 48px;
+  font-family: "Noto Serif", Helvetica;
+  font-weight: 500;
+  color: #0000008f;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.mid-fidelity .search-icon {
+  width: 22px;
+  height: 21px;
+  left: 22px;
+  position: absolute;
+  top: 16px;
+}
+
+.mid-fidelity .profile-group {
+  position: absolute;
+  width: 144px;
+  height: 59px;
+  top: 99px;
+  left: 82px;
+}
+
+.mid-fidelity .notification-icon {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 19px;
+  left: 117px;
+}
+
+.mid-fidelity .user-profile {
+  position: absolute;
+  width: 58px;
+  height: 59px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 29px/29.5px;
+}
+
+.mid-fidelity .user-icon {
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  top: 18px;
+  left: 19px;
+}
+
+.mid-fidelity .settings-icon-2 {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 18px;
+  left: 72px;
+}
+
+.mid-fidelity .logo {
+  position: absolute;
+  width: 263px;
+  height: 51px;
+  top: 16px;
+  left: 35px;
+}
+
+.mid-fidelity .text-wrapper-11 {
+  position: absolute;
+  width: 210px;
+  height: 49px;
+  top: 1px;
+  left: 51px;
+  font-family: "Gabriela", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.mid-fidelity .overlap-group-wrapper-2 {
+  position: absolute;
+  width: 42px;
+  height: 51px;
+  top: 0;
+  left: 0;
+}
+
+.mid-fidelity .overlap-group-4 {
+  position: relative;
+  height: 51px;
+}
+
+.mid-fidelity .ellipse {
+  position: absolute;
+  width: 41px;
+  height: 40px;
+  top: 1px;
+  left: 1px;
+  background-color: #f2ede7;
+  border-radius: 20.43px/19.93px;
+}
+
+.mid-fidelity .group {
+  position: absolute;
+  width: 38px;
+  height: 12px;
+  top: 38px;
+  left: 2px;
+}
+
+.mid-fidelity .rectangle-12 {
+  position: absolute;
+  width: 31px;
+  height: 7px;
+  top: 0;
+  left: 3px;
+  background-color: #da9b3c;
+}
+
+.mid-fidelity .rectangle-13 {
+  position: absolute;
+  width: 38px;
+  height: 5px;
+  top: 7px;
+  left: 0;
+  background-color: #da9b3c;
+}
+
+.chat-message {
+  font-family: "Noto Serif";
+  font-weight: 300;
+  font-size: 10px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.chat-message p {
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  max-width: 55%;
+  padding: 0.5rem 0.875rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.chat-message p::before,
+.chat-message p::after {
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+.althea-chat {
+  display: flex;
+  flex-direction: row;
+}
+
+.althea-bubble {
+  position: relative;
+  bottom: 5px;
+}
+
+.althea-name {
+  margin-left: 16px;
+}
+
+p.from-althea {
+  z-index: 1;
+  background-color: #1d1d1b;
+  color: #f2ede7;
+  margin-top: 0px;
+}
+
+p.from-althea:before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid #1d1d1b;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-althea::after {
+  background-color: #f8d6a4;
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+.user-name {
+  padding-left: 43%;
+}
+
+p.from-user {
+  align-self: flex-end;
+  background-color: #f2ede7;
+  color: #000000;
+  margin-top: 0px;
+}
+
+p.from-user::before {
+  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-right: 1rem solid #f2ede7;
+  right: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-user::after {
+  background-color: #f8d6a4;
+  border-bottom-left-radius: 0.5rem;
+  right: -40px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+.althea-icon {
+  z-index: 2;
+  align-self: end;
+  width: 45px;
+  height: 35px;
+  padding-right: 3px;
+  margin-left: -10px;
+}
