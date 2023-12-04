@@ -17,8 +17,8 @@ function App() {
           <Route exact path="/" element={<Main/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/quotes" element={<Quotes />} />
-          <Route path="/chat" element={<Chat />} />
+          {/* <Route path="/quotes" element={<Quotes />} />
+          <Route path="/chat" element={<Chat />} /> */}
           <Route path="/signout" element={<Signout />} />
           <Route exact path="/settings" element={<Settings />} />
           <Route exact path="/user" element={<MainLogin />} />
