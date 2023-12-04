@@ -509,7 +509,7 @@ input[type="file"] {
 
 .mid-fidelity .profile-settings {
   width: 164px;
-  top: 410px;
+  top: 487px;
   left: 31px;
   position: absolute;
   height: 28px;
@@ -542,7 +542,7 @@ input[type="file"] {
   position: absolute;
   width: 135px;
   height: 28px;
-  top: 315px;
+  top: 429px;
   left: 28px;
 }
 
@@ -573,7 +573,7 @@ input[type="file"] {
   position: absolute;
   width: 97px;
   height: 28px;
-  top: 231px;
+  top: 371px;
   left: 29px;
 }
 
@@ -610,7 +610,7 @@ input[type="file"] {
   position: absolute;
   width: 93px;
   height: 28px;
-  top: 142px;
+  top: 313px;
   left: 31px;
 }
 
@@ -686,13 +686,13 @@ input[type="file"] {
   top: 16px;
 }
 
-/* .mid-fidelity .profile-group {
+.mid-fidelity .profile-group {
   position: absolute;
   width: 144px;
   height: 59px;
   top: 99px;
   left: 82px;
-} */
+}
 
 .mid-fidelity .notification-icon {
   position: absolute;
