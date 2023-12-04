@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.css";
 import "../css/settings.css";
+import configData from "../config.json";
 
 export default function Settings() {
   const [form, setForm] = useState({
@@ -17,7 +18,7 @@ export default function Settings() {
   useEffect(() => {
     const fetchFirstUserData = async () => {
       try {
-        const response = await fetch("http://localhost:5050/firstuserinfo");
+        const response = await fetch(configData.SERVER_URL + "/firstuserinfo");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -61,7 +62,7 @@ export default function Settings() {
       formData.append("image", imageFile); // Append the image file if it's available
     }
     try {
-      const response = await fetch("http://localhost:5050/settings", {
+      const response = await fetch(configData.SERVER_URL + "/settings", {
         // Change to your API's update endpoint
         method: "PUT", // or 'PATCH' depending on your API
         body: formData,
