@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.css";
 import "../css/output.css";
-import "../css/requestyle.css";
+import "../css/requeststyle.css";
 import GroupedLogo from "../img/Grouped_Logo.svg";
 import GroupedProfile from "../img/Grouped_Profile.svg";
 import Althea from "../img/Althea.svg";
