@@ -94,7 +94,7 @@ export default function Login() {
                 <form onSubmit={onSubmit} data-testid="form">
                     <label className="email" for="email">Email</label>
                     <input 
-                        type="text" 
+                        type="email" 
                         placeholder="Enter Eamil"
                         id="email" 
                         value={form.email}

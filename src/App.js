@@ -9,7 +9,6 @@ import Quotes from "./components/quotes";
 import Chat from "./components/chat";
 import Signout from "./components/signout";
 import Settings from "./components/settings";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {

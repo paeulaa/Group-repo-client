@@ -122,7 +122,7 @@ export default function Register() {
                             <div className="block-3">
                                 <label htmlFor="email">Email address</label>
                                 <input 
-                                    type="text" 
+                                    type="email" 
                                     placeholder="Email address" 
                                     name="email" 
                                     id="email"
@@ -134,7 +134,7 @@ export default function Register() {
                             <div className="block-4">
                                 <label htmlFor="c-email">Confirm Email Address</label>
                                 <input 
-                                    type="text" 
+                                    type="email" 
                                     placeholder="Confirm Email Address" 
                                     name="c-email" 
                                     id="confirmEmail"

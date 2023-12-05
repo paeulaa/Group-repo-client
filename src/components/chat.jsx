@@ -116,7 +116,6 @@ export default function Chat() {
             <div>
                 <div className="fixed top-0 left-0 inset-y-0 z-50 flex w-72 flex-col">
                     <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
-                        
                         <Link to="/user" className="flex h-16 shrink-0 items-center">
                             <img className="btn h-10 w-auto" src={GroupedLogo} alt="Company Logo"></img>
                         </Link>
