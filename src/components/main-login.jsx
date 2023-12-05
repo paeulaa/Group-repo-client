@@ -75,9 +75,11 @@ export default function Main() {
           <div className="name">Good Fortune</div>
         </div>
         <div className="footer">
-          <img src={instagram} alt="insta" />
-          <img src={twitter} alt="twitter" />
-          <img src={youtube} alt="yt" />
+          <div className="images">
+            <img src={instagram} alt="insta" />
+            <img src={twitter} alt="twitter" />
+            <img src={youtube} alt="yt" />
+          </div>
           <div className="copyright">
             ©Good Fortune 2023 - all rights reserved
           </div>
