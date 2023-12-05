@@ -39,35 +39,33 @@ body{
             display:flex;
             flex-direction: row;
             place-items: center;
-            /* padding-left: 39rem; */
+            padding-right: 3rem;
             justify-content: center;
-            font-size: 20px;
-            a{
+            font-size: 20px;    
+            div.login-button{
                 text-decoration: none;
-                div.login-button{
-                    justify-content: center;
-                    color:black;
-                    padding: 0.5rem 2rem 0.5rem 2rem;
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                justify-content: center;
+                color:black;
+                padding: 0.5rem 2rem 0.5rem 2rem;
+                &:hover {
+                    text-decoration: underline;
                 }
             }
-            a{
+            div.register-button{
                 text-decoration: none;
-                div.register-button{
-                    border-style: solid;
-                    border-color: black;
-                    justify-content: center;
-                    color:black;
-                    padding: 0.5rem 2rem 0.5rem 2rem;
-                    &:hover {
-                        color:#F8D6A4;
-                        border-color: #F8D6A4;
-                        background-color: black;
-                    }
+                border-style: solid;
+                border-width: 0.1rem;
+                border-color: black;
+                justify-content: center;
+                color:black;
+                padding: 0.5rem 2rem 0.5rem 2rem;
+                &:hover {
+                    color:#F8D6A4;
+                    border-color: #F8D6A4;
+                    background-color: black;
                 }
             }
+        
         }
     }
     div.section1{
@@ -90,33 +88,32 @@ body{
                 display: inline-flex;
                 justify-content: center;
                 padding: 3rem 0rem 0rem 0rem;
-                a{
+                   
+                div.register-button{
                     text-decoration: none;
-                    div.register-button{
-                        border-style: solid;
-                        border-color: black;
-                        justify-content: center;
-                        padding: 0.5rem 5rem 0.5rem 5rem;
-                        margin-right: 3rem;
-                        font-size: 1.5rem;
-                        text-decoration: none;
-                        color:black;
-                        &:hover {
-                            color:#F2EDE7;
-                            border-color: #F2EDE7;
-                            background-color: black;
-                        }
+                    border-style: solid;
+                    border-color: black;
+                    border-width: 0.1rem;
+                    justify-content: center;
+                    padding: 0.5rem 5rem 0.5rem 5rem;
+                    margin-right: 3rem;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    color:black;
+                    &:hover {
+                        color:#F2EDE7;
+                        border-color: #F2EDE7;
+                        background-color: black;
                     }
                 }
-                a{
-                    text-decoration: none;
-                    div.moreinformation-button{
-                        justify-content: center;
-                        padding: 0.5rem 2.5rem 0.5rem 2.5rem;
-                        color:black;
-                        &:hover {
-                            text-decoration: underline;
-                        }
+            
+                text-decoration: none;
+                div.moreinformation-button{
+                    justify-content: center;
+                    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+                    color:black;
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
             }
@@ -126,8 +123,8 @@ body{
             border-color: black; */
             margin-right: 3rem;
             img{
-                width: 580px;
-                height: 580px;
+                width: 90rem;
+                height: 38rem;
             }
         }
     }
@@ -136,9 +133,9 @@ body{
         flex-direction: row;
         background-color: #F8D6A4;
         div.left{
-            margin: 7rem 3rem 0rem 4rem;
+            margin: 10rem 3rem 0rem 4rem;
             img{
-                width:47rem;
+                width:65rem;
                 height:25rem;;
             }
         }
@@ -162,7 +159,7 @@ body{
         div.left{
             margin: 10rem 2rem 0rem 5rem;
             img{
-                width:47rem;
+                width:100rem;
                 height:35rem;;
             }
         }
@@ -173,7 +170,7 @@ body{
             font-weight: 800;
             line-height: 3.5rem;
             letter-spacing: 0.0625rem;
-            padding: 16rem 4.5rem 0rem 0rem;
+            padding: 22rem 4.5rem 0rem 0rem;
             text-align: center;
         }
     }
@@ -199,13 +196,20 @@ body{
             }
         }
         div.footer{
+            display: flex;
+            flex-direction: column;
             position:absolute;
             text-align: right;
             left:73%;
             padding: 3rem 0rem 0rem 0rem;
-            img{
-                width:50px;
-                height:50px;
+            div.images{
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                img{
+                    width:50px;
+                    height:50px;
+                }
             }
             div.copyright{
                 padding: 0.5rem 0rem 0rem 0rem;

@@ -43,32 +43,29 @@ body div.navbar div.buttons {
   display: flex;
   flex-direction: row;
   place-items: center;
-  /* padding-left: 39rem; */
+  padding-right: 3rem;
   justify-content: center;
   font-size: 20px;
 }
-body div.navbar div.buttons a {
+body div.navbar div.buttons div.login-button {
   text-decoration: none;
-}
-body div.navbar div.buttons a div.login-button {
   justify-content: center;
   color: black;
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
-body div.navbar div.buttons a div.login-button:hover {
+body div.navbar div.buttons div.login-button:hover {
   text-decoration: underline;
 }
-body div.navbar div.buttons a {
+body div.navbar div.buttons div.register-button {
   text-decoration: none;
-}
-body div.navbar div.buttons a div.register-button {
   border-style: solid;
+  border-width: 0.1rem;
   border-color: black;
   justify-content: center;
   color: black;
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
-body div.navbar div.buttons a div.register-button:hover {
+body div.navbar div.buttons div.register-button:hover {
   color: #F8D6A4;
   border-color: #F8D6A4;
   background-color: black;
@@ -95,13 +92,13 @@ body div.section1 div.introduction div.buttons {
   display: inline-flex;
   justify-content: center;
   padding: 3rem 0rem 0rem 0rem;
-}
-body div.section1 div.introduction div.buttons a {
   text-decoration: none;
 }
-body div.section1 div.introduction div.buttons a div.register-button {
+body div.section1 div.introduction div.buttons div.register-button {
+  text-decoration: none;
   border-style: solid;
   border-color: black;
+  border-width: 0.1rem;
   justify-content: center;
   padding: 0.5rem 5rem 0.5rem 5rem;
   margin-right: 3rem;
@@ -109,20 +106,17 @@ body div.section1 div.introduction div.buttons a div.register-button {
   text-decoration: none;
   color: black;
 }
-body div.section1 div.introduction div.buttons a div.register-button:hover {
+body div.section1 div.introduction div.buttons div.register-button:hover {
   color: #F2EDE7;
   border-color: #F2EDE7;
   background-color: black;
 }
-body div.section1 div.introduction div.buttons a {
-  text-decoration: none;
-}
-body div.section1 div.introduction div.buttons a div.moreinformation-button {
+body div.section1 div.introduction div.buttons div.moreinformation-button {
   justify-content: center;
   padding: 0.5rem 2.5rem 0.5rem 2.5rem;
   color: black;
 }
-body div.section1 div.introduction div.buttons a div.moreinformation-button:hover {
+body div.section1 div.introduction div.buttons div.moreinformation-button:hover {
   text-decoration: underline;
 }
 body div.section1 div.coverImage {
@@ -131,8 +125,8 @@ body div.section1 div.coverImage {
   margin-right: 3rem;
 }
 body div.section1 div.coverImage img {
-  width: 580px;
-  height: 580px;
+  width: 90rem;
+  height: 38rem;
 }
 body div.section2 {
   display: flex;
@@ -140,10 +134,10 @@ body div.section2 {
   background-color: #F8D6A4;
 }
 body div.section2 div.left {
-  margin: 7rem 3rem 0rem 4rem;
+  margin: 10rem 3rem 0rem 4rem;
 }
 body div.section2 div.left img {
-  width: 47rem;
+  width: 65rem;
   height: 25rem;
 }
 body div.section2 div.right {
@@ -167,7 +161,7 @@ body div.section3 div.left {
   margin: 10rem 2rem 0rem 5rem;
 }
 body div.section3 div.left img {
-  width: 47rem;
+  width: 100rem;
   height: 35rem;
 }
 body div.section3 div.right {
@@ -177,7 +171,7 @@ body div.section3 div.right {
   font-weight: 800;
   line-height: 3.5rem;
   letter-spacing: 0.0625rem;
-  padding: 16rem 4.5rem 0rem 0rem;
+  padding: 22rem 4.5rem 0rem 0rem;
   text-align: center;
 }
 body div.section4 {
@@ -203,12 +197,19 @@ body div.section4 div.brand div.name {
   padding-left: 0.5rem;
 }
 body div.section4 div.footer {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   text-align: right;
   left: 73%;
   padding: 3rem 0rem 0rem 0rem;
 }
-body div.section4 div.footer img {
+body div.section4 div.footer div.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+body div.section4 div.footer div.images img {
   width: 50px;
   height: 50px;
 }
