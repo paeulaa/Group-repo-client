@@ -12,6 +12,8 @@ import BookmarksIcon from "../img/Bookmarks.svg";
 import ProfileSettingsIcon from "../img/Profile Settings.svg";
 import SignOutIcon from "../img/sign-out.svg";
 
+import configData from "../config.json";
+
 export default function Settings() {
   const [form, setForm] = useState({
     fname: "",
