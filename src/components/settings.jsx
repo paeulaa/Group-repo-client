@@ -12,6 +12,8 @@ import BookmarksIcon from "../img/Bookmarks.svg";
 import ProfileSettingsIcon from "../img/Profile Settings.svg";
 import SignOutIcon from "../img/sign-out.svg";
 
+import configData from "../config.json";
+
 export default function Settings() {
   const [form, setForm] = useState({
     fname: "",
@@ -28,13 +30,13 @@ export default function Settings() {
   useEffect(() => {
     const fetchFirstUserData = async () => {
       try {
-        const response = await fetch("http://localhost:5050/firstuserinfo");
+        const response = await fetch(configData.SERVER_URL + "/firstuserinfo");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
         if (data.imageUrl) {
-          setImageSrc(`http://localhost:5050${data.imageUrl}`);
+          setImageSrc(configData.SERVER_URL + `${data.imageUrl}`);
           setIsImageUploaded(true);
         }
         console.log("Fetched userId:", data._id); // Log the userId
@@ -112,7 +114,7 @@ export default function Settings() {
     console.log("Validation passed, proceeding with submission");
     try {
       console.log("Sending data to server");
-      const response = await fetch("http://localhost:5050/settings", {
+      const response = await fetch(configData.SERVER_URL + "/settings", {
         // Change to your API's update endpoint
         method: "PUT", // or 'PATCH' depending on your API
         body: formData,
