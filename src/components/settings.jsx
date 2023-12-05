@@ -16,12 +16,12 @@ import configData from "../config.json";
 
 export default function Settings() {
   const [form, setForm] = useState({
-    fname: "",
-    lname: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    conemail: "",
+    confirmEmail: "",
     password: "",
-    conpassword: "",
+    confirmPassword: "",
     pronoun: "",
     imageUrl: "",
   });
@@ -43,8 +43,8 @@ export default function Settings() {
         console.log("Fetched imageUrl", data.imageUrl);
         sessionStorage.setItem("userId", data._id);
         setForm({
-          fname: data.fname,
-          lname: data.lname,
+          firstName: data.firstName,
+          lastName: data.lastName,
           email: data.email,
           imageUrl: data.imageUrl,
         });
@@ -69,12 +69,12 @@ export default function Settings() {
     // Validation for required fields
     // Validation check for required fields
     if (
-      !form.fname ||
-      !form.lname ||
+      !form.firstName ||
+      !form.lastName ||
       !form.email ||
       !form.password ||
-      !form.conemail ||
-      !form.conpassword
+      !form.confirmEmail ||
+      !form.confirmPassword
     ) {
       window.alert("Please fill out all required fields.");
       return;
@@ -88,13 +88,13 @@ export default function Settings() {
     }
 
     // Check if email and confirm email match
-    if (form.email !== form.conemail) {
+    if (form.email !== form.confirmEmail) {
       window.alert("Email and confirm email do not match.");
       return;
     }
 
     // Check if password and confirm password match
-    if (form.password !== form.conpassword) {
+    if (form.password !== form.confirmPassword) {
       window.alert("Password and confirm password do not match.");
       return;
     }
@@ -104,8 +104,8 @@ export default function Settings() {
     const userChange = { ...form, userId };
     const formData = new FormData();
     formData.append("userId", userId);
-    formData.append("fname", form.fname);
-    formData.append("lname", form.lname);
+    formData.append("firstName", form.firstName);
+    formData.append("lastName", form.lastName);
     formData.append("email", form.email);
     formData.append("password", form.password);
     if (imageFile) {
@@ -280,7 +280,7 @@ export default function Settings() {
             )}
           </figure>
           <div className="div">
-            {form.fname} {form.lname}
+            {form.firstName} {form.lastName}
           </div>
           <label className="upload-group">
             <input
@@ -313,15 +313,15 @@ export default function Settings() {
             <div className="div-2">
               <input
                 className="form-control pshort"
-                id="fname"
-                name="fname"
+                id="firstName"
+                name="firstName"
                 type="text"
-                value={form.fname}
-                onChange={(e) => updateForm({ fname: e.target.value })}
+                value={form.firstName}
+                onChange={(e) => updateForm({ firstName: e.target.value })}
                 required=""
               />
             </div>
-            <label htmlFor="fname" className="text-wrapper-5">
+            <label htmlFor="firstName" className="text-wrapper-5">
               First Name *
             </label>
           </div>
@@ -329,15 +329,15 @@ export default function Settings() {
             <div className="div-2">
               <input
                 className="form-control pshort"
-                id="lname"
-                name="lname"
+                id="lastName"
+                name="lastName"
                 type="text"
-                value={form.lname}
-                onChange={(e) => updateForm({ lname: e.target.value })}
+                value={form.lastName}
+                onChange={(e) => updateForm({ lastName: e.target.value })}
                 required=""
               />
             </div>
-            <label htmlFor="lname" className="text-wrapper-5">
+            <label htmlFor="lastName" className="text-wrapper-5">
               Last Name *
             </label>
           </div>
@@ -361,15 +361,15 @@ export default function Settings() {
             <div className="div-3">
               <input
                 className="form-control plong"
-                id="conemail"
-                name="conemail"
+                id="confirmEmail"
+                name="confirmEmail"
                 type="text"
-                value={form.conemail}
-                onChange={(e) => updateForm({ conemail: e.target.value })}
+                value={form.confirmEmail}
+                onChange={(e) => updateForm({ confirmEmail: e.target.value })}
                 required=""
               />
             </div>
-            <label htmlFor="conemail" className="text-wrapper-6">
+            <label htmlFor="confirmEmail" className="text-wrapper-6">
               Confirm Email Address *
             </label>
           </div>
@@ -399,11 +399,13 @@ export default function Settings() {
             <div className="div-2">
               <input
                 className="form-control password"
-                id="conpassword"
-                name="conpassword"
+                id="confirmPassword"
+                name="confirmPassword"
                 type={isConfirmPasswordVisible ? "text" : "password"}
-                value={form.conpassword}
-                onChange={(e) => updateForm({ conpassword: e.target.value })}
+                value={form.confirmPassword}
+                onChange={(e) =>
+                  updateForm({ confirmPassword: e.target.value })
+                }
                 required=""
               />
               <img
@@ -413,7 +415,7 @@ export default function Settings() {
                 style={{ cursor: "pointer" }} // Optional: Changes the cursor to a pointer when hovering over the image
               />
             </div>
-            <label htmlFor="conpassword" className="text-wrapper-5">
+            <label htmlFor="confirmPassword" className="text-wrapper-5">
               Confirm Password *
             </label>
           </div>
