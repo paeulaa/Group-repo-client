@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import '../css/main.css';
@@ -13,6 +13,16 @@ import youtube from '../img/youtube.svg';
 // import { MDBFooter, MDBContainer, MDBCol, MDBRow, MDBIcon, MDBBtn} from 'mdb-react-ui-kit';
 
 export default function Main() {
+    const section1 = useRef(null);
+    const section2 = useRef(null);
+
+    const scrollToSection = (elementRef) =>{
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
     return(
         <div className="body">
             <div className="navbar">
@@ -28,7 +38,7 @@ export default function Main() {
                     <Link className="nav-link" to ="/register"><div className="register-button" id="register">Try now!</div></Link>
                 </div>
             </div>
-            <div className="section1">
+            <div ref={section1} className="section1">
                 <div className="introduction">
                     <div className="title">
                         Embrace the Power of Positivity and Self-Discovery with <b>Good Fortune</b>: 
@@ -36,14 +46,14 @@ export default function Main() {
                     </div>
                     <div className="buttons">
                         <Link className="nav-link" to ="/register"><div className="register-button" id="register" ><b>Try now!</b></div></Link>
-                        <a href="#"><div className="moreinformation-button">Read more about <br />Good Fortune</div></a>
+                        <div onClick={()=> scrollToSection(section2)} className="moreinformation-button">Read more about <br />Good Fortune</div>
                     </div>
                 </div>
                 <div className="coverImage">
                     <img src={coverImage} alt="coverImage" />
                 </div>
             </div>
-            <div className="section2">
+            <div ref={section2} className="section2">
                 <div className="left">
                     <img src={picture2} alt="picture1" />
                 </div>
@@ -75,7 +85,7 @@ export default function Main() {
                         ©Good Fortune 2023 - all rights reserved
                     </div>
                 </div>
-                <Link className="nav-link" to ="/"><div className="back">&#8593; Back to top</div></Link>
+                <div onClick={()=> scrollToSection(section1)} className="back">&#8593; Back to top</div>
             </div>
         </div>
     );
