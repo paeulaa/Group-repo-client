@@ -2,7 +2,7 @@
   position: relative;
   width: 1728px;
   height: 1117px;
-  background-color: #f2ede7;
+  background-color: #F2EDE7;
 }
 
 .request-page .overlap {
@@ -173,7 +173,6 @@
   height: 1117px;
   top: 0;
   left: 0;
-  background-image: url(./img/rectangle-1.svg);
   background-size: 100% 100%;
 }
 
@@ -536,7 +535,6 @@
   height: 357px;
   top: 274px;
   left: 644px;
-  background-image: url(./img/group-20.png);
   background-size: 100% 100%;
 }
 
