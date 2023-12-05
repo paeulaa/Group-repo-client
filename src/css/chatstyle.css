@@ -1,5 +1,5 @@
 .chat-page {
-  width: 1728px;
+  width: 100%;
   height: 1117px;
   background-color: #f2ede7;
 }
@@ -304,7 +304,7 @@
 
 .chat-page .rectangle-3 {
   position: absolute;
-  width: 1406px;
+  width: 100%;
   height: 111px;
   top: 0;
   left: 0;
@@ -418,7 +418,7 @@
 
 .chat-page .group-5 {
   position: absolute;
-  width: 286px;
+  width: 100%;
   height: 70px;
   top: 0;
   left: 55px;
@@ -426,7 +426,7 @@
 
 .chat-page .text-wrapper-5 {
   position: absolute;
-  width: 284px;
+  width: 100%;
   height: 70px;
   top: 0;
   left: 0;
@@ -464,12 +464,14 @@
 
 .chat-page .overlap-8 {
   position: relative;
-  width: 1086px;
-  height: 83px;
+  width: 513px;
+  height: 100px;
   background-color: #d9d9d9;
   border-radius: 20px;
   border: 1px solid;
   border-color: #1d1d1b;
+  left: 35%;
+  top: 0%;
 }
 
 .chat-page .icon-paper-plane {
@@ -495,7 +497,7 @@
 
 .chat-page .group-8 {
   position: absolute;
-  width: 646px;
+  width: 1000px;
   height: 117px;
   top: 685px;
   left: 347px;
@@ -513,45 +515,44 @@
   position: absolute;
   width: 30px;
   height: 40px;
-  top: 0;
-  left: 616px;
+  top: 50px;
+  left: 640px;
 }
 
-.chat-page .content {
+.chat-page .response {
   display: flex;
-  width: 470px;
+  width: 800px;
   align-items: flex-start;
   gap: 16px;
   padding: 16px;
   position: absolute;
   top: 40px;
-  left: 124px;
-  background-color: #1d1d1b;
+  left: -160px;
   border-radius: 15px;
 }
 
 .chat-page .text-wrapper-7 {
   position: relative;
-  width: 283px;
+  width: 500px;
   height: 35px;
   margin-top: -1px;
   font-family: "Gabriela", Helvetica;
   font-weight: 400;
-  color: #ffffff;
-  font-size: 24px;
+  color: #000000;
+  font-size: 20px;
   text-align: center;
   letter-spacing: 0;
   line-height: 31px;
   white-space: nowrap;
 }
 
-.chat-page .sharktooth {
+/* .chat-page .sharktooth {
   position: absolute;
   width: 12px;
   height: 20px;
   top: 14px;
   left: -11px;
-}
+} */
 
 .chat-page .group-10 {
   position: absolute;
@@ -579,14 +580,10 @@
   position: absolute;
   top: 16px;
   left: 0;
-  background-color: #ffffff;
   border-radius: 15px;
-  border: 1px solid;
-  border-color: #000000;
-  transform: rotate(180deg);
 }
 
-.chat-page .text-wrapper-8 {
+/* .chat-page .text-wrapper-8 {
   position: relative;
   width: 218px;
   height: 42px;
@@ -599,16 +596,16 @@
   font-size: 24px;
   letter-spacing: 0;
   line-height: 31px;
-}
+} */
 
-.chat-page .sharktooth-2 {
+/* .chat-page .sharktooth-2 {
   position: absolute;
   width: 12px;
   height: 20px;
   top: 30px;
   left: -11px;
   transform: rotate(-180deg);
-}
+} */
 
 .chat-page .group-11 {
   position: absolute;
@@ -644,9 +641,11 @@
 
 .chat-page .p {
   position: absolute;
-  width: 473px;
-  top: 15px;
-  left: 16px;
+  width: 218px;
+  height: 42px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 16px;
   font-family: "Noto Serif", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -680,7 +679,6 @@
   position: absolute;
   top: 15px;
   left: 116px;
-  background-color: #1d1d1b;
   border-radius: 15px;
 }
 
@@ -692,7 +690,7 @@
   margin-right: -93px;
   font-family: "Gabriela", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   letter-spacing: 0;
   line-height: 31px;
@@ -717,7 +715,6 @@
   position: absolute;
   top: 15px;
   left: 116px;
-  background-color: #1d1d1b;
   border-radius: 15px;
 }
 
@@ -729,7 +726,7 @@
   margin-right: -7px;
   font-family: "Gabriela", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   letter-spacing: 0;
   line-height: 31px;
