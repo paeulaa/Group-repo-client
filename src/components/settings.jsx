@@ -2,7 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import "../css/output.css";
 import "../css/settings.css";
+import GroupedLogo from "../img/Grouped_Logo.svg";
+import GroupedProfile from "../img/Grouped_Profile.svg";
+import Althea from "../img/Althea.svg";
+import QuotesIcon from "../img/Quotes.svg";
+import BookmarksIcon from "../img/Bookmarks.svg";
+import ProfileSettingsIcon from "../img/Profile Settings.svg";
+import SignOutIcon from "../img/sign-out.svg";
 
 export default function Settings() {
   const [form, setForm] = useState({
@@ -169,58 +177,89 @@ export default function Settings() {
 
   return (
     <div className="mid-fidelity">
-      <div className="sidebar">
-        <div className="overlap-2">
-          <div className="signout">
-            <div className="signout-text">
-              <div className="text-wrapper-7">Sign out</div>
-            </div>
-            <img className="signout-icon" src="/img/signout-icon.svg" />
+      <div className="fixed top-0 left-0 inset-y-0 z-50 flex w-72 flex-col">
+        <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
+          <div>
+            <Link to="/" className="flex h-16 shrink-0 items-center">
+              <img
+                className="btn h-10 w-auto"
+                src={GroupedLogo}
+                alt="Company Logo"
+              ></img>
+            </Link>
           </div>
-          <Link to="/settings">
-            <div className="profile-settings">
-              <div className="text-wrapper-8">Profile Settings</div>
-              <img className="settings-icon" src="/img/settings-icon.svg" />
-            </div>
-          </Link>
-          <Link to="/bookmarks">
-            <div className="bookmarks">
-              <img className="bookmark-icon" src="/img/bookmark-icon.svg" />
-              <div className="text-wrapper-9">Bookmarks</div>
-            </div>
-          </Link>
-          <Link to="/quotes">
-            <div className="quotes">
-              <div className="overlap-group-2">
-                <div className="text-wrapper-10">Quotes</div>
-                <img className="scroll-icon" src="/img/scroll-icon.svg" />
-              </div>
-            </div>
-          </Link>
-          <Link to="/althea">
-            <div className="althea">
-              <div className="overlap-3">
-                <div className="text-wrapper-11">Althea</div>
-                <img
-                  className="crystall-ball-icon"
-                  src="/img/crystall-ball-icon.svg"
-                />
-              </div>
-            </div>
-          </Link>
-          {/* <div className="profile-group">
-            <div className="user-icon-wrapper">
-              <img className="user-icon" src="/img/user-icon.svg" />
-            </div>
-          </div> */}
-          <Link to="/">
-            <div className="logo">
-              <div className="text-wrapper-12">Good Fortune</div>
-              <div className="overlap-group-wrapper">
-                <img className="overlap-group-3" src="/img/logo.svg" />
-              </div>
-            </div>
-          </Link>
+          <div className="icon-user-circle-wrapper">
+            <img
+              className="icon-user-circle"
+              src={GroupedProfile}
+              alt="User Profile"
+            ></img>
+          </div>
+          <nav className="flex flex-1 flex-col">
+            <ul role="list" className="flex flex-1 flex-col gap-y-7">
+              <li>
+                <ul role="list" className="-mx-2 space-y-1">
+                  <li>
+                    <Link
+                      to="/althea"
+                      className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                    >
+                      <img
+                        className="btn h-7 w-auto"
+                        src={Althea}
+                        alt="Crystal Ball"
+                      ></img>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/quotes"
+                      className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                    >
+                      <img
+                        className="btn h-7 w-auto"
+                        src={QuotesIcon}
+                        alt="Quotes Icon"
+                      ></img>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/bookmark"
+                      className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                    >
+                      <img
+                        className="btn h-7 w-auto"
+                        src={BookmarksIcon}
+                        alt="Bookmark Icon"
+                      ></img>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/settings"
+                      className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                    >
+                      <img
+                        className="btn h-7 w-auto"
+                        src={ProfileSettingsIcon}
+                        alt="Cog Icon"
+                      ></img>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <Link to="/signout" className="flex justify-center items-center">
+              <img
+                className="btn h-7 w-auto"
+                src={SignOutIcon}
+                alt="Sign Out Icon"
+              ></img>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="overlap">
