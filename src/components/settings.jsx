@@ -99,25 +99,31 @@ export default function Settings() {
       return;
     }
 
-    const userId = sessionStorage.getItem("userId");
-    console.log("Submitting for userId:", userId);
-    const userChange = { ...form, userId };
-    const formData = new FormData();
-    formData.append("userId", userId);
-    formData.append("firstName", form.firstName);
-    formData.append("lastName", form.lastName);
-    formData.append("email", form.email);
-    formData.append("password", form.password);
-    if (imageFile) {
-      formData.append("image", imageFile); // Append the image file if it's available
-    }
+    // const userId = sessionStorage.getItem("userId");
+    // console.log("Submitting for userId:", userId);
+    // const userChange = { ...form, userId };
+    // const formData = new FormData();
+    // formData.append("userId", userId);
+    // formData.append("firstName", form.firstName);
+    // formData.append("lastName", form.lastName);
+    // formData.append("email", form.email);
+    // formData.append("password", form.password);
+    // if (imageFile) {
+    //   formData.append("image", imageFile); // Append the image file if it's available
+    // }
+    const userChange = { ...form };
     console.log("Validation passed, proceeding with submission");
     try {
       console.log("Sending data to server");
       const response = await fetch(configData.SERVER_URL + "/settings", {
         // Change to your API's update endpoint
         method: "PUT", // or 'PATCH' depending on your API
-        body: formData,
+        // body: formData,
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userChange),
       });
       console.log("Response received", response);
 
@@ -151,12 +157,35 @@ export default function Settings() {
   const [isImageUploaded, setIsImageUploaded] = useState(false);
   const [imageFile, setImageFile] = useState(null);
 
-  const handleImageChange = (e) => {
+  const handleImageChange = async (e) => {
     if (e.target.files && e.target.files[0]) {
       let file = e.target.files[0];
       setImageSrc(URL.createObjectURL(file));
       setImageFile(file);
       setIsImageUploaded(true);
+
+      const formData = new FormData();
+      formData.append("image", file);
+      try {
+        // Assuming '/upload' is your endpoint for uploading images
+        const response = await fetch(configData.SERVER_URL + "/upload", {
+          method: "POST",
+          body: formData,
+          // Note: Fetch API does not require Content-Type header for FormData
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (data && data.fileUrl) {
+          setImageFile(data.fileUrl); // Update state with the URL from the response
+        }
+      } catch (error) {
+        console.error("Error uploading file:", error);
+        // Handle error appropriately
+      }
     }
   };
 
