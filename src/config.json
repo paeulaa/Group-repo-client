@@ -1,3 +1,4 @@
 {
-  "SERVER_URL": "https://group-repo-server.vercel.app"
+  "SERVER_URL": "https://group-repo-server.vercel.app",
+  "REACT_APP_GOOGLE_CLIENT_ID": "298408291851-6na3jmrrg9uqnoe039g0g5sf96n27sbu.apps.googleusercontent.com"
 }
