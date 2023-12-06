@@ -99,25 +99,31 @@ export default function Settings() {
       return;
     }
 
-    const userId = sessionStorage.getItem("userId");
-    console.log("Submitting for userId:", userId);
-    const userChange = { ...form, userId };
-    const formData = new FormData();
-    formData.append("userId", userId);
-    formData.append("firstName", form.firstName);
-    formData.append("lastName", form.lastName);
-    formData.append("email", form.email);
-    formData.append("password", form.password);
-    if (imageFile) {
-      formData.append("image", imageFile); // Append the image file if it's available
-    }
+    // const userId = sessionStorage.getItem("userId");
+    // console.log("Submitting for userId:", userId);
+    // const userChange = { ...form, userId };
+    // const formData = new FormData();
+    // formData.append("userId", userId);
+    // formData.append("firstName", form.firstName);
+    // formData.append("lastName", form.lastName);
+    // formData.append("email", form.email);
+    // formData.append("password", form.password);
+    // if (imageFile) {
+    //   formData.append("image", imageFile); // Append the image file if it's available
+    // }
+    const userChange = { ...form };
     console.log("Validation passed, proceeding with submission");
     try {
       console.log("Sending data to server");
       const response = await fetch(configData.SERVER_URL + "/settings", {
         // Change to your API's update endpoint
-        method: "POST", // or 'PATCH' depending on your API
-        body: formData,
+        method: "PUT", // or 'PATCH' depending on your API
+        // body: formData,
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userChange),
       });
       console.log("Response received", response);
 
