@@ -127,25 +127,25 @@ export default function Chat() {
                                 <li>
                                     <ul role="list" className="-mx-2 space-y-1">
                                         <li>
-                                            <Link to="/chat"
+                                            <Link to="chat.html"
                                                 className="bg-gray-800 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={Althea} alt="Crystal Ball"></img>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/quotes"
+                                            <Link to="quotes.html"
                                                 className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={QuotesIcon} alt="Quotes Icon"></img>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/bookmarks"
+                                            <Link to="bookmark.html"
                                                 className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={BookmarksIcon} alt="Bookmark Icon"></img>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/settings"
+                                            <Link to="profilesettings.html"
                                                 className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={ProfileSettingsIcon} alt="Cog Icon"></img>
                                             </Link>
