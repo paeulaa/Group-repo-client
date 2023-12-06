@@ -162,7 +162,7 @@ export default function Settings() {
       formData.append("image", file);
       try {
         // Assuming '/upload' is your endpoint for uploading images
-        const response = await fetch("http://localhost:3000/upload", {
+        const response = await fetch(configData.SERVER_URL + "/upload", {
           method: "POST",
           body: formData,
           // Note: Fetch API does not require Content-Type header for FormData
