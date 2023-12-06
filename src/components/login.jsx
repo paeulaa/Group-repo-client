@@ -1,13 +1,12 @@
 import React, { useState }  from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import { GoogleLogin } from "react-google-login";
 import "bootstrap/dist/css/bootstrap.css";
 import '../css/login.css';
 import carousel01 from '../img/carousel01.svg';
 import carousel02 from '../img/carousel02.svg';
 import carousel03 from '../img/carousel03.svg';
-// import google from '../img/Google.svg';
+import google from '../img/Google.svg';
 import Carousel from 'react-bootstrap/Carousel';
 
 import configData from "../config.json";
@@ -60,34 +59,6 @@ export default function Login() {
         // navigate("/user")
       }
 
-      const [GoogleLoginData, setGoogleLoginData] = useState(
-        localStorage.getItem('GoogleLoginData')
-        ? JSON.parse(localStorage.getItem('GoogleLoginData'))
-        : null
-      )
-      const handleGoogleFailure = (result) => {
-        alert(result);
-      }
-      const handleGoogleLogin = async (googleData) => {
-        const res = await fetch('/api/google-login', {
-            method: 'POST',
-            body:JSON.stringify({
-                token: googleData.tokenId,
-            }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        const data = await res.json();
-        setGoogleLoginData(data);
-        localStorage.setItem('loginData', JSON.stringify(data));
-        console.log(googleData);
-      }
-      const handleGoogleLogout = () => {
-        localStorage.removeItem('GoogleLoginData');
-        setGoogleLoginData(null);
-      }
-
     return(
         <div className="container-text-center">
             <div className="carousel-container">
@@ -137,7 +108,7 @@ export default function Login() {
                         value={form.password}
                         onChange={(e) => updateForm({ password: e.target.value })}
                     required/>
-                    <div className="psw">Forgot <u>password?</u></div>
+                    <div className="psw">Forgot <a href="#"><u>password?</u></a></div>
                     <input
                         type="submit"
                         value="Login"
@@ -145,31 +116,11 @@ export default function Login() {
                     />
                     </form>
                     <div className="horizontal-line">or</div>
-                    <div>
-                        {GoogleLoginData ? (
-                                <div>
-                                    <h3>You logged in as {GoogleLoginData.email}</h3>
-                                    <button onClick={handleGoogleLogout}>Logout</button>
-                                </div>
-                                
-                        ):(
-                             <GoogleLogin 
-                             className="google-login"
-                             clientId={configData.REACT_APP_GOOGLE_CLIENT_ID}
-                             buttonText="Login with Google"
-                             onSuccess={handleGoogleLogin}
-                             onFailure={handleGoogleFailure}
-                             cookiePolicy={'single_host_origin'}
-                             >
-                            </GoogleLogin>
-                        )}
-                    </div>
-                    
-                    {/* <a href="#"><button type="email">
+                    <a href="#"><button type="email">
                         <img src={google} alt="google"/>
                         <div className="elogin"><b>Continue with Google</b></div>
                     </button>
-                    </a> */}
+                    </a>
                     <div className="newac">
                         <Link className="nav-link" to ="/register">New Travelers? <u>Create An Account</u></Link>
                     </div>

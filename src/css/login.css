@@ -166,20 +166,6 @@ body div.container-text-center div.login-block div.loginContainer div.horizontal
   border-bottom: 1px #1D1D1B solid;
   margin: 0rem 0.3rem 0.5rem 0.3rem;
 }
-body div.container-text-center div.login-block div.loginContainer button.google-login {
-  width: 100%;
-  height: 3rem;
-  margin: 1rem 0rem 1rem 0rem;
-  /* padding: 2rem 5rem 2rem 5rem; */
-  align-items: center;
-  /* border-style: solid;
-  border-color:#1D1D1B;
-  background-color: #D99B3C; */
-  border-width: 1px;
-}
-body div.container-text-center div.login-block div.loginContainer button.google-login span {
-  text-align: center;
-}
 body div.container-text-center div.login-block div.loginContainer a button[type=email] {
   width: 100%;
   height: 3rem;
