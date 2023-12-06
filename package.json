@@ -52,5 +52,8 @@
   "repository": {
     "type": "git",
     "url": "GROUP-REPO"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
