@@ -151,12 +151,35 @@ export default function Settings() {
   const [isImageUploaded, setIsImageUploaded] = useState(false);
   const [imageFile, setImageFile] = useState(null);
 
-  const handleImageChange = (e) => {
+  const handleImageChange = async (e) => {
     if (e.target.files && e.target.files[0]) {
       let file = e.target.files[0];
       setImageSrc(URL.createObjectURL(file));
       setImageFile(file);
       setIsImageUploaded(true);
+
+      const formData = new FormData();
+      formData.append("image", file);
+      try {
+        // Assuming '/upload' is your endpoint for uploading images
+        const response = await fetch("http://localhost:3000/upload", {
+          method: "POST",
+          body: formData,
+          // Note: Fetch API does not require Content-Type header for FormData
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (data && data.fileUrl) {
+          setImageFile(data.fileUrl); // Update state with the URL from the response
+        }
+      } catch (error) {
+        console.error("Error uploading file:", error);
+        // Handle error appropriately
+      }
     }
   };
 
