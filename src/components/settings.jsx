@@ -123,7 +123,10 @@ export default function Settings() {
           fname: form.firstName, // Update field names to match server expectations
           lname: form.lastName,
           email: form.email,
+          confirmEmail: form.confirmEmail,
           password: form.password,
+          confirmPassword: form.confirmPassword,
+          pronoun: form.pronoun,
           // Add additional fields if needed
         }),
       });
