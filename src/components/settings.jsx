@@ -116,7 +116,7 @@ export default function Settings() {
       console.log("Sending data to server");
       const response = await fetch(configData.SERVER_URL + "/settings", {
         // Change to your API's update endpoint
-        method: "PUT", // or 'PATCH' depending on your API
+        method: "POST", // or 'PATCH' depending on your API
         body: formData,
       });
       console.log("Response received", response);
