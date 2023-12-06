@@ -99,19 +99,14 @@ export default function Settings() {
       return;
     }
 
-    // const userId = sessionStorage.getItem("userId");
-    // console.log("Submitting for userId:", userId);
-    // const userChange = { ...form, userId };
-    // const formData = new FormData();
-    // formData.append("userId", userId);
-    // formData.append("firstName", form.firstName);
-    // formData.append("lastName", form.lastName);
-    // formData.append("email", form.email);
-    // formData.append("password", form.password);
-    // if (imageFile) {
-    //   formData.append("image", imageFile); // Append the image file if it's available
-    // }
-    const userChange = { ...form };
+    const userId = sessionStorage.getItem("userId"); // Get userId from session storage
+    if (!userId) {
+      window.alert("User ID is missing. Please log in again.");
+      return;
+    }
+
+    const userChange = { ...form, userId };
+    console.log("Submitting for userId:", userId);
     console.log("Validation passed, proceeding with submission");
     try {
       console.log("Sending data to server");
@@ -123,7 +118,14 @@ export default function Settings() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userChange),
+        body: JSON.stringify({
+          userId, // Make sure to include this in the body
+          fname: form.firstName, // Update field names to match server expectations
+          lname: form.lastName,
+          email: form.email,
+          password: form.password,
+          // Add additional fields if needed
+        }),
       });
       console.log("Response received", response);
 
