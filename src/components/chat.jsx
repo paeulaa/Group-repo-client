@@ -139,7 +139,7 @@ export default function Chat() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/bookmarks"
+                                            <Link to="/bookmark"
                                                 className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={BookmarksIcon} alt="Bookmark Icon"></img>
                                             </Link>

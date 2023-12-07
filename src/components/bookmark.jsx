@@ -39,7 +39,7 @@ export default function Bookmarks() {
                 <ul role="list" className="-mx-2 space-y-1">
                   <li>
                     <Link
-                      to="/althea"
+                      to="/chat"
                       className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                     >
                       <img
