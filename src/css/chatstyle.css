@@ -508,7 +508,7 @@
   width: 106px;
   height: 88px;
   top: 29px;
-  left: 0;
+  left: 30px;
 }
 
 .chat-page .icon-bookmark {
@@ -539,7 +539,7 @@
   font-family: "Gabriela", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   letter-spacing: 0;
   line-height: 31px;

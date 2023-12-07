@@ -164,8 +164,12 @@ export default function Chat() {
             </div>
             <div className="chat-page">
                 <div className="group-8">
+                    <div>
                     <img className="group-9" src={AltheaH3} alt="Althea Head 3"></img>
+                    </div>
+                    <div>
                     <img className="icon-bookmark" src={BlackBookmark} alt="Black Bookmark Icon"></img>
+                    </div>
                     <div className="content">
                         <div id="chatlog" className="text-wrapper-7"></div>
                         <img className="chat" src={AltheaBubble} alt="Althea Chat Bubble"></img>
