@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/output.css';
+import '../css/requeststyle.css';
 import GroupedLogo from '../img/Grouped_Logo.svg';
 import GroupedProfile from '../img/Grouped_Profile.svg';
 import Althea from '../img/Althea.svg';
@@ -25,7 +26,7 @@ export default function Quotes() {
                 <div className="fixed top-0 left-0 inset-y-0 z-50 flex w-72 flex-col">
                     <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
                         <div>
-                            <Link to="#" className="flex h-16 shrink-0 items-center">
+                            <Link to="/user" className="flex h-16 shrink-0 items-center">
                                 <img className="btn h-10 w-auto" src={GroupedLogo} alt="Company Logo"></img>
                             </Link>
                         </div>
@@ -37,25 +38,25 @@ export default function Quotes() {
                                 <li>
                                     <ul role="list" className="-mx-2 space-y-1">
                                         <li>
-                                            <Link to="chat.html"
+                                            <Link to="/chat"
                                                 className="bg-gray-800 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={Althea} alt="Crystal Ball"></img>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="quotes.html"
+                                            <Link to="/quotes"
                                                 className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={QuotesIcon} alt="Quotes Icon"></img>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="bookmark.html"
+                                            <Link to="/bookmark"
                                                 className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={BookmarksIcon} alt="Bookmark Icon"></img>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="profilesettings.html"
+                                            <Link to="/settings"
                                                 className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                                                 <img className="btn h-7 w-auto" src={ProfileSettingsIcon} alt="Cog Icon"></img>
                                             </Link>
@@ -65,7 +66,7 @@ export default function Quotes() {
                             </ul>
                         </nav>
                         <div>
-                            <Link to="signout.html" className="flex justify-center items-center">
+                            <Link to="/signout" className="flex justify-center items-center">
                                 <img className="btn h-7 w-auto" src={SignOutIcon} alt="Sign Out Icon"></img>
                             </Link>
                         </div>
@@ -85,13 +86,13 @@ export default function Quotes() {
             </div>
             <div className="py-10 lg:pl-72">
                 <div className="btn px-4 sm:px-6 lg:px-8">
-                    <div><a href="chat.html" className="philosophy-filter" onclick="request('Philosophy')">
+                    <div><a href="/chat" className="philosophy-filter" onclick="request('Philosophy')">
                         <div className="overlap-7">
                             <img className="phil-btn" src={PhilBtnIcon} alt="Philosophy Button"></img>
                         </div>
                     </a>
                     </div>
-                    <div><a href="chat.html" className="btn proverb-filter">
+                    <div><a href="/chat" className="btn proverb-filter">
                         <div className="overlap-group-3">
                             <div>
                                 <img className="prov-btn" src={ProvBtnIcon} alt="Proverb Button"></img>
@@ -99,7 +100,7 @@ export default function Quotes() {
                         </div>
                     </a>
                     </div>
-                    <div><a href="chat.html" className="btn affirmation-filter">
+                    <div><a href="/chat" className="btn affirmation-filter">
                         <div className="overlap-7">
                             <img className="affirm-btn" src={AffirmBtnIcon} alt="Affirmation Button"></img>
                         </div>
