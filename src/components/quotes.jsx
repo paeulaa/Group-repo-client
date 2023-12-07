@@ -47,7 +47,7 @@ export default function Quotes() {
                   <ul role="list" className="-mx-2 space-y-1">
                     <li>
                       <Link
-                        to="chat.html"
+                        to="/chat"
                         className="bg-gray-800 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                       >
                         <img
@@ -59,7 +59,7 @@ export default function Quotes() {
                     </li>
                     <li>
                       <Link
-                        to="quotes.html"
+                        to="/quotes"
                         className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                       >
                         <img
@@ -71,7 +71,7 @@ export default function Quotes() {
                     </li>
                     <li>
                       <Link
-                        to="bookmark.html"
+                        to="/bookmark"
                         className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                       >
                         <img
@@ -83,7 +83,7 @@ export default function Quotes() {
                     </li>
                     <li>
                       <Link
-                        to="profilesettings.html"
+                        to="/settings"
                         className="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                       >
                         <img
@@ -99,7 +99,7 @@ export default function Quotes() {
             </nav>
             <div>
               <Link
-                to="signout.html"
+                to="/signout"
                 className="flex justify-center items-center"
               >
                 <img
