@@ -833,7 +833,7 @@ flex-direction: row;
 .px-4 {
   position: absolute;
   left: 35%;
-  top: 60%;
+  top: 1000%;
   display: flex;
   justify-content: center;
   align-items: center;
