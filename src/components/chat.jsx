@@ -181,7 +181,7 @@ export default function Chat() {
                     <img className="icon-user-circle-3" src={UserIcon} alt="Black User Icon"></img>
                     <div className="overlap-9">
                         <img className="content-3" src={UserBubble2} alt="White Chat Bubble"></img>
-                        <p className="text-wrapper-0">
+                        <p className="p">
                             I wish . . .
                             <input type="text" id="userInput"></input>
                             <input
