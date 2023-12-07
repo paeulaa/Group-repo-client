@@ -25,7 +25,11 @@ export default function Settings() {
     pronoun: "",
     imageUrl: "",
   });
-  const navigate = useNavigate();
+
+  const [displayName, setDisplayName] = useState({
+    firstName: "",
+    lastName: "",
+  });
 
   useEffect(() => {
     const fetchFirstUserData = async () => {
@@ -46,7 +50,13 @@ export default function Settings() {
           firstName: data.firstName,
           lastName: data.lastName,
           email: data.email,
+          pronoun: data.pronoun,
           imageUrl: data.imageUrl,
+        });
+
+        setDisplayName({
+          firstName: data.firstName,
+          lastName: data.lastName,
         });
       } catch (error) {
         console.error("Fetching first user data failed:", error);
@@ -56,14 +66,14 @@ export default function Settings() {
     fetchFirstUserData();
   }, []);
 
-  // These methods will update the state properties.
+  // update the state properties.
   function updateForm(value) {
     return setForm((prev) => {
       return { ...prev, ...value };
     });
   }
 
-  // This function will handle the submission.
+  // handle the submission.
   async function onSubmit(e) {
     e.preventDefault();
     // Validation for required fields
@@ -99,31 +109,35 @@ export default function Settings() {
       return;
     }
 
-    // const userId = sessionStorage.getItem("userId");
-    // console.log("Submitting for userId:", userId);
-    // const userChange = { ...form, userId };
-    // const formData = new FormData();
-    // formData.append("userId", userId);
-    // formData.append("firstName", form.firstName);
-    // formData.append("lastName", form.lastName);
-    // formData.append("email", form.email);
-    // formData.append("password", form.password);
-    // if (imageFile) {
-    //   formData.append("image", imageFile); // Append the image file if it's available
-    // }
-    const userChange = { ...form };
+    const userId = sessionStorage.getItem("userId"); // Get userId from session storage
+    if (!userId) {
+      window.alert("User ID is missing. Please log in again.");
+      return;
+    }
+
+    const userChange = { ...form, userId };
+    console.log("Submitting for userId:", userId);
     console.log("Validation passed, proceeding with submission");
     try {
       console.log("Sending data to server");
       const response = await fetch(configData.SERVER_URL + "/settings", {
-        // Change to your API's update endpoint
         method: "PUT", // or 'PATCH' depending on your API
         // body: formData,
         crossDomain: true,
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userChange),
+        body: JSON.stringify({
+          userId, // Make sure to include this in the body
+          firstName: form.firstName, // Update field names to match server expectations
+          lastName: form.lastName,
+          email: form.email,
+          confirmEmail: form.confirmEmail,
+          password: form.password,
+          confirmPassword: form.confirmPassword,
+          pronoun: form.pronoun,
+          // Add additional fields if needed
+        }),
       });
       console.log("Response received", response);
 
@@ -293,8 +307,8 @@ export default function Settings() {
           </div>
         </div>
       </div>
-      <div className="overlap">
-        <div className="text-wrapper">Profile Settings</div>
+      <div className="page-group">
+        <div className="page-title">Profile Settings</div>
         <div className="profile-image">
           <figure
             className="image-container"
@@ -309,7 +323,7 @@ export default function Settings() {
             )}
           </figure>
           <div className="div">
-            {form.firstName} {form.lastName}
+            {displayName.firstName} {displayName.lastName}
           </div>
           <label className="upload-group">
             <input
@@ -323,14 +337,14 @@ export default function Settings() {
             </div>
           </label>
           <div
-            className="text-wrapper-3"
+            className="remove-btn"
             onClick={handleRemoveImage}
             style={{ cursor: "pointer" }}
           >
             Remove
           </div>
-          <img className="line" src="/img/line-9.svg" />
-          <div className="text-wrapper-4">Image requirements:</div>
+          <img className="divide-line" src="/img/line-9.svg" />
+          <div className="requirements">Image requirements:</div>
           <p className="min-px-px">
             Min. 400 px * 400 px
             <br />
@@ -382,7 +396,7 @@ export default function Settings() {
                 required=""
               />
             </div>
-            <label htmlFor="email" className="text-wrapper-6">
+            <label htmlFor="email" className="fieldName-long">
               Email Address *
             </label>
           </div>
@@ -398,7 +412,7 @@ export default function Settings() {
                 required=""
               />
             </div>
-            <label htmlFor="confirmEmail" className="text-wrapper-6">
+            <label htmlFor="confirmEmail" className="fieldName-long">
               Confirm Email Address *
             </label>
           </div>
@@ -449,7 +463,7 @@ export default function Settings() {
             </label>
           </div>
           <div className="group-7">
-            <label htmlFor="pronoun" className="text-wrapper-6">
+            <label htmlFor="pronoun" className="fieldName-long">
               Pronoun
             </label>
             <div className="div-3">
@@ -457,6 +471,8 @@ export default function Settings() {
                 className="form-control dropdown-select"
                 id="pronoun"
                 name="pronoun"
+                value={form.pronoun}
+                onChange={(e) => updateForm({ pronoun: e.target.value })}
               >
                 <option value="">Select...</option>
                 <option value="he/him">He/Him</option>
@@ -466,10 +482,6 @@ export default function Settings() {
                 <option value="other">Other</option>
               </select>
             </div>
-            {/* <div className="div-3">
-              <img className="polygon" src="/img/triangle.svg" />
-            </div>
-            <div className="text-wrapper-6">Pronoun</div> */}
           </div>
         </form>
         <input
