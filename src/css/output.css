@@ -833,7 +833,7 @@ flex-direction: row;
 .px-4 {
   position: absolute;
   left: 35%;
-  top: 60%;
+  top: 1000%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -877,7 +877,7 @@ img[src="img/sign-out.svg"] {
 .scroll-message {
   position: absolute;
   left: 50%;
-  top: 30%; /* Adjust the value to shift the scroll image further down */
+  top: 550%; /* Adjust the value to shift the scroll image further down */
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
@@ -893,7 +893,7 @@ img[src="img/Scroll Message.svg"] {
 .make-a-wish-section {
   position: absolute;
   left: 50%;
-  top: 53%; /* Adjust the value to shift the scroll image further down */
+  top: 900%; /* Adjust the value to shift the scroll image further down */
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;

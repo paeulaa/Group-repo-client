@@ -135,7 +135,7 @@ export default function Quotes() {
         <div className="btn px-4 sm:px-6 lg:px-8">
           <div>
             <a
-              href="chat.html"
+              href="/chat"
               className="philosophy-filter"
               onclick="request('Philosophy')"
             >
@@ -149,7 +149,7 @@ export default function Quotes() {
             </a>
           </div>
           <div>
-            <a href="chat.html" className="btn proverb-filter">
+            <a href="/chat" className="btn proverb-filter">
               <div className="overlap-group-3">
                 <div>
                   <img
@@ -162,7 +162,7 @@ export default function Quotes() {
             </a>
           </div>
           <div>
-            <a href="chat.html" className="btn affirmation-filter">
+            <a href="/chat" className="btn affirmation-filter">
               <div className="overlap-7">
                 <img
                   className="affirm-btn"
